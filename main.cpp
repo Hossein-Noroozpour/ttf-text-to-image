@@ -197,7 +197,8 @@ int main(int arg, char **argv)
     ttf_file.read(reinterpret_cast<char *>(ttf_data.data()), ttf_data.size());
     Font2D fnt(ttf_data);
     int img_height, img_width;
-    const auto img_data = fnt.bake(L"Hello World\nFuck you", 1000, 200, 10);
+    float ratio = 0.0f;
+    const auto img_data = fnt.bake(L"Hello World\nWhat a nice text you", 1000, 200, 10, ratio);
     //     for(int i = 0 ; i < 100; ++i)
     //     for(int j = 0 ; j < 20; ++j)
     //     screen[j][i] = 0;
